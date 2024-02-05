@@ -22,11 +22,11 @@ if (CUDA_VERSION VERSION_LESS 9.0)
 endif()
 
 # Kepler GPUs are only supported with CUDA < 11.0
-if (CUDA_VERSION VERSION_LESS 11.0)
-    list(APPEND DEFAULT_CUDA_ARCH "30")
-else()
-    list(APPEND DEFAULT_CUDA_ARCH "35")
-endif()
+# if (CUDA_VERSION VERSION_LESS 11.0)
+#     list(APPEND DEFAULT_CUDA_ARCH "30")
+# else()
+#     list(APPEND DEFAULT_CUDA_ARCH "35")
+# endif()
 
 # add Pascal support for CUDA >= 8.0
 if (NOT CUDA_VERSION VERSION_LESS 8.0)
